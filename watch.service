@@ -1,0 +1,13 @@
+[Unit]
+Description=watch
+After=network.target
+
+[Service]
+Type=simple
+User=monk
+ExecStart=/usr/bin/node watch.js
+WorkingDirectory=/home/monk/code/watch
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
